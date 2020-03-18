@@ -3,10 +3,10 @@ Hspec name is `Model+Spec.hs`
 
 ## 2.Quickcheck    
 Quickcheck stack project note:
-- exmaples in folder `tests/Quicknote`, the same as `source-dirs` in package.yaml
+- examples in folder `tests/Quicknote`, the same as `source-dirs` in package.yaml
 - main model in file `Examples.hs`, the same as `main` in package.yaml
 - The model name of file `Examples.hs` must be `Main` rather than `Example` or `Quicknote.Example`.
-  - The model name of file which is desgnated in `main` field in the package.yaml must be `Main`.
+  - The model name of file which is designated in `main` field in the package.yaml must be `Main`.
   - If there is more than one file in `tests/Quicknote` there mode name is the form `Quicknote.xxxx`.
 
 ```
@@ -38,7 +38,7 @@ main = quickCheck prop_RevRev
 ```
 The target function we would like to test is `reverse`.   
 The property of this target function is: If we apply this function twice `reverse (reverse xs)`, we will get the original list `xs`.  
-This proporty is being described as `reverse (reverse xs) == xs`  
+This property is being described as `reverse (reverse xs) == xs`  
 
 QuickCheck generates number of random values of type `a` and feed to function `prop_rev`.   
 
@@ -137,7 +137,7 @@ condition, generator, sized etc...
 >> 	```oneof <list of generators>```
 >> which chooses among the generators in the list with equal probability. 
 >> ```
->> oneof :: [Gen a] -> Gen a 	-- Defined in ‘Test.QuickCheck.Gen’
+>> oneof:: [Gen a] -> Gen a 	-- Defined in ‘Test.QuickCheck.Gen’
 >> ```
 > 
 >> - **frequency**
